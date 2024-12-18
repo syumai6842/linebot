@@ -1,0 +1,4 @@
+cd /Users/kanayanaokyou/Documents/c_program/line
+/Users/kanayanaokyou/.pyenv/versions/3.11.10/bin/python3.11 /Users/kanayanaokyou/Documents/c_program/line/app_history.py
+
+ngrok http --url=painfully-wise-hagfish.ngrok-free.app 8000
