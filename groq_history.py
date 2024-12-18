@@ -7,7 +7,7 @@ def chat(input_text, chat_history):
     client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
     system_prompt = {
         "role": "system",
-        "content": open('/Users/kanayanaokyou/Documents/c_program/line/reference.txt', 'r').read()
+        "content": open('./reference.txt', 'r').read()
     }
     # 最初のリクエスト時にsystem_promptを追加
     if not chat_history:
