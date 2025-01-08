@@ -29,10 +29,6 @@ def chat(input_text, chat_history):
         temperature=1.0
     )
     
-    # アシスタントのレスポンスを履歴に追加
-    # assistant_response = response.choices[0].message.content
-    # chat_history.append({"role": "assistant", "content": assistant_response})
-
     # LLMの反応を返す
     print(response.choices[0].message.content)
     return response.choices[0].message.content
