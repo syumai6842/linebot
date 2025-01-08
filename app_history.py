@@ -46,7 +46,7 @@ def handle_message(event):
 
   # チャット履歴に発言を追加
   chat_history.append(event.message.text)
-  if len(user_messages) >= 10:
+  if len(user_messages) >= 11:
     user_messages.pop(0)
   user_messages.append(user_id)
   print("User messages:", user_messages)
