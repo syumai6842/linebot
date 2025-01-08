@@ -21,6 +21,7 @@ httpx==0.28.1
 idna==3.10
 itsdangerous==2.2.0
 Jinja2==3.1.4
+googlesearch-python==1.2.5
 libusb1==3.1.0
 line-bot-sdk==3.14.2
 MarkupSafe==3.0.2
