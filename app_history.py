@@ -49,6 +49,7 @@ def handle_message(event):
   if len(user_messages) >= 10:
     user_messages.pop(0)
   user_messages.append(user_id)
+  print("User messages:", user_messages)
 
   # 過去10回のチャットが3人以下で行われているか確認
   recent_users = set(user_messages[-10:])  # 最新10回の発言者を取得
