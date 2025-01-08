@@ -53,6 +53,7 @@ def handle_message(event):
 
   # 過去10回のチャットが3人以下で行われているか確認
   recent_users = set(user_messages[-10:])  # 最新10回の発言者を取得
+  print("set:", recent_users)
   if len(recent_users) <= 3 & len(user_messages) >= 10:
       line_bot_api.push_message(event.source.user_id, TextSendMessage(text="他の皆さんは意見ありますか？"))
       # 他の人に話を振った後、履歴をリセット
