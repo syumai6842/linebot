@@ -52,6 +52,9 @@ def handle_message(event):
   recent_users = set(user_messages[-10:])  # 最新10回の発言者を取得
   if len(recent_users) <= 3:
       line_bot_api.push_message(event.source.user_id, TextSendMessage(text="他の皆さんは意見ありますか？"))
+      # 他の人に話を振った後、履歴をリセット
+      user_messages.clear()
+      chat_history.clear()
 
   msg_result:str = groq_history.chat(event.message.text, chat_history)
   if msg_result.split()[0] == "TRAVEL":
